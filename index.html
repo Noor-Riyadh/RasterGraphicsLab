@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Raster Graphics Lab</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .menu {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            width: 200px;
+            text-decoration: none;
+            color: black;
+        }
+
+        .card:hover {
+            background-color: #f0f0f0;
+        }
+
+        .pending {
+            color: #888;
+            border-style: dashed;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Computer Graphics Algorithms</h1>
+    <p>Implementing 2D Graphics Primitives </p>
+
+    <div class="menu">
+        <a href="dda.html" class="card">
+            <h3>DDA Line</h3>
+            <p>Digital Differential Analyzer </p>
+        </a>
+
+        <div class="card pending">
+            <h3>Bresenham</h3>
+            <p>Coming Soon...</p>
+        </div>
+
+        <div class="card pending">
+            <h3>Circle</h3>
+            <p>Coming Soon... </p>
+        </div>
+    </div>
+</body>
+
+</html>
