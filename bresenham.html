@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Drawing Assignment</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        canvas {
+            border: 2px solid #333;
+            background-color: #f9f9f9;
+            margin-top: 20px;
+        }
+
+        .controls {
+            background: #eee;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            margin-right: 15px;
+            font-weight: 500;
+        }
+
+        input {
+            width: 60px;
+            padding: 5px 8px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        button {
+            padding: 8px 16px;
+            margin: 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        button:last-child {
+            background-color: #f44336;
+        }
+
+        button:last-child:hover {
+            background-color: #da190b;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Bresenham Algorithm Implementation</h2>
+
+    <div class="controls">
+        <label>Start X: <input type="number" id="x0" value="1"></label>
+        <label>Start Y: <input type="number" id="y0" value="1"></label>
+        <br><br>
+        <label>End X: <input type="number" id="xEnd" value="8"></label>
+        <label>End Y: <input type="number" id="yEnd" value="7"></label>
+        <button onclick="handleDraw()">Draw Line</button>
+        <button onclick="clearCanvas()">Clear</button>
+    </div>
+
+    <canvas id="myCanvas" width="500" height="500"></canvas>
+
+    <script src="./bresenham.js"></script>
+</body>
+
+</html>
