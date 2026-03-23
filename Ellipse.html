@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Midpoint Ellipse Algorithm</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        canvas {
+            border: 2px solid #333;
+            background-color: #fff;
+            margin-top: 20px;
+        }
+
+        .controls {
+            background: #f0f0f0;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        input {
+            width: 50px;
+            margin: 0 10px;
+        }
+
+        button {
+            padding: 8px 12px;
+            cursor: pointer;
+            background: #6f42c1;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Midpoint Ellipse Algorithm Implementation</h2>
+    <div class="controls">
+        <label>Cx: <input type="number" id="exc" value="25"></label>
+        <label>Cy: <input type="number" id="eyc" value="25"></label>
+        <label>Rx: <input type="number" id="erx" value="15"></label>
+        <label>Ry: <input type="number" id="ery" value="10"></label>
+        <button onclick="handleDrawEllipse()">Draw Ellipse</button>
+    </div>
+    <canvas id="myCanvas" width="500" height="500"></canvas>
+
+    <script>
+        function handleDrawEllipse() {
+            const canvas = document.getElementById("myCanvas");
+            const ctx = canvas.getContext("2d");
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            const xc = parseInt(document.getElementById("exc").value);
+            const yc = parseInt(document.getElementById("eyc").value);
+            const rx = parseInt(document.getElementById("erx").value);
+            const ry = parseInt(document.getElementById("ery").value);
+
+            drawMidpointEllipse(xc, yc, rx, ry);
+        }
+    </script>
+    <script src="./Ellipse.js"></script>
+</body>
+
+</html>
