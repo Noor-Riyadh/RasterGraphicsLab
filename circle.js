@@ -33,7 +33,7 @@ function drawMidpointCircle(xCenter, yCenter, radius) {
     } else {
       // Select SE (Southeast): midpoint is outside the circle 
       y--;
-      p += 2 * (x - y) + 1; // Increment for SE selection [cite: 578, 627]
+      p += 2 * (x - y) + 1; // Increment for SE selection 
     }
     circlePlotPoints(xCenter, yCenter, x, y, SCALE, ctx);
   }
